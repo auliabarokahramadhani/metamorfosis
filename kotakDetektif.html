@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintaks 2: Problem Statement</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), 
+                        url('background.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* --- Navigasi --- */
+        .nav-header {
+            width: 100%;
+            padding: 20px 30px;
+            display: flex;
+            gap: 10px;
+            justify-content: flex-start;
+        }
+
+        .btn-nav {
+            padding: 8px 18px;
+            background: white;
+            border-radius: 50px;
+            text-decoration: none;
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .btn-nav:hover {
+            border-color: #81c784;
+            transform: translateY(-2px);
+        }
+
+        /* --- Main Content --- */
+        .content-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            max-width: 800px;
+            padding-bottom: 50px;
+            text-align: center;
+        }
+
+        .page-title {
+            margin-bottom: 30px;
+        }
+
+        .page-title h1 {
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            color: #1b5e20;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.7);
+        }
+
+        .page-title p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: #388e3c;
+            font-weight: 500;
+        }
+
+        /* --- Balon Dialog --- */
+        .dialog-box {
+            background: white;
+            border-radius: 25px;
+            padding: 20px 25px;
+            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 35px;
+            position: relative;
+            border: 3px solid #a8e063;
+        }
+
+        .dialog-box::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 15px 15px 0;
+            border-style: solid;
+            border-color: white transparent transparent;
+        }
+
+        .dialog-box p {
+            font-size: clamp(1rem, 2.5vw, 1.15rem);
+            color: #1b4d00;
+            line-height: 1.6;
+        }
+
+        /* --- Container Tombol --- */
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* --- Tombol Aksi --- */
+        .btn-action {
+            display: inline-block;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            font-weight: bold;
+            border-radius: 50px;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 280px; /* Ukuran lebar tombol seragam */
+        }
+
+        .btn-padlet {
+            background: linear-gradient(45deg, #4caf50, #8bc34a);
+            color: white;
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+        }
+
+        .btn-next {
+            background: #1b5e20;
+            color: white;
+            box-shadow: 0 6px 20px rgba(27, 94, 32, 0.3);
+        }
+
+        .btn-action:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        @media (max-width: 480px) {
+            .nav-header {
+                padding: 15px;
+                justify-content: center;
+            }
+            .btn-action {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="nav-header">
+        <a href="m-sempurna.html" class="btn-nav">← Kembali</a>
+        <a href="index.html" class="btn-nav">🏠 Home</a>
+    </header>
+
+    <main class="content-wrapper">
+        
+        <div class="page-title">
+            <h1>PROBLEM STATEMENT</h1>
+            <p>Ayo kita mulai berdiskusi!</p>
+        </div>
+
+        <div class="dialog-box">
+            <p>Baik anak-anak, setelah mengamati video, mari kita tuliskan rumusan masalah yang kalian temukan dalam video tersebut</p>
+        </div>
+
+        <div class="button-group">
+            <a href="https://padlet.com/nurlailakatrina095/problem-statement-tuliskan-rumusan-masalah-yang-kalian-temuk-rsugcoa09im52y22" 
+               target="_blank" 
+               class="btn-action btn-padlet">
+                BUKA PADLET
+            </a>
+
+            <a href="LaboratoriumVirtual.html" class="btn-action btn-next">
+                NEXT ➔
+            </a>
+        </div>
+
+    </main>
+
+</body>
+</html>

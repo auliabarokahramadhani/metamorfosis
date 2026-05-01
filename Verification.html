@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintaks 4: Verifikasi Jawaban</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Recursive', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), 
+                        url('background.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden; /* Menghindari scroll seluruh halaman */
+        }
+
+        /* --- Navigasi --- */
+        .nav-header {
+            width: 100%;
+            padding: 10px 20px;
+            display: flex;
+            gap: 12px;
+            flex: 0 0 auto;
+        }
+
+        .btn-nav {
+            padding: 8px 15px;
+            background: white;
+            border-radius: 50px;
+            text-decoration: none;
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 0.8rem;
+            box-shadow: 0 3px 0px #81c784;
+            border: 2px solid #81c784;
+        }
+
+        /* --- Konten Utama --- */
+        .content-wrapper {
+            flex: 1;
+            width: 95%;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .page-title h1 {
+            font-size: clamp(1.2rem, 4vh, 2rem);
+            color: #1b5e20;
+            text-shadow: 2px 2px 0px white;
+            margin-bottom: 5px;
+        }
+
+        /* --- Slide Gaya PPT --- */
+        .ppt-slide {
+            width: 100%;
+            background: white;
+            border-radius: 25px;
+            border: 8px solid #ffffff;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            max-height: 70vh; /* Agar pas di landscape */
+        }
+
+        .slide-header {
+            background: #a8e063;
+            padding: 10px;
+            color: #1b5e20;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.1rem;
+            border-bottom: 3px solid #81c784;
+        }
+
+        .slide-body {
+            padding: 20px;
+            overflow-y: auto; /* Jika teks panjang bisa discroll di dalam kotak */
+            background: #f9fff9;
+            text-align: left;
+        }
+
+        .quiz-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px dashed #c8e6c9;
+        }
+
+        .quiz-item:last-child { border: none; }
+
+        .question {
+            font-weight: bold;
+            color: #2e7d32;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .answer-key {
+            background: #fff9c4;
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 5px;
+            color: #d32f2f;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .explanation {
+            font-size: 0.95rem;
+            color: #4e342e;
+            line-height: 1.4;
+            text-align: justify;
+        }
+
+        /* --- Tombol Lanjut --- */
+        .footer-section {
+            flex: 0 0 auto;
+            padding: 15px;
+        }
+
+        .btn-next {
+            display: inline-block;
+            padding: 12px 40px;
+            background: linear-gradient(45deg, #ff9800, #ffb74d);
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 100px;
+            box-shadow: 0 5px 0 #e65100;
+            transition: 0.2s;
+            text-transform: uppercase;
+        }
+
+        .btn-next:hover { transform: scale(1.05); }
+
+        /* Media Query Landscape HP */
+        @media (max-height: 500px) {
+            .ppt-slide { max-height: 55vh; }
+            .explanation { font-size: 0.85rem; }
+            .slide-header { padding: 5px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="nav-header">
+        <a href="game.html" class="btn-nav">← Kembali</a>
+        <a href="index.html" class="btn-nav">🏠 Home</a>
+    </header>
+
+    <main class="content-wrapper">
+        <div class="page-title">
+            <h1>Verification ✨</h1>
+        </div>
+
+        <div class="ppt-slide">
+            <div class="slide-header">
+                Kunci Jawaban & Pembahasan 
+            </div>
+            
+            <div class="slide-body">
+                <div class="quiz-item">
+                    <span class="question">1. Apa itu Metamorfosis?</span>
+                    <span class="answer-key">Jawaban: Perubahan Bentuk</span>
+                    <p class="explanation">Metamorfosis adalah proses perkembangan pada hewan yang melibatkan perubahan penampilan fisik dan/atau struktur setelah kelahiran atau penetasan.</p>
+                </div>
+
+                <div class="quiz-item">
+                    <span class="question">2. Urutan Metamorfosis Sempurna?</span>
+                    <span class="answer-key">Jawaban: Telur - Larva - Pupa - Imago</span>
+                    <p class="explanation">Disebut sempurna karena bentuk hewan saat muda sangat berbeda dengan bentuk dewasanya. Contohnya ulat yang berubah total menjadi kupu-kupu melalui tahap kepompong (pupa).</p>
+                </div>
+
+                <div class="quiz-item">
+                    <span class="question">3. Apa itu Fase Pupa?</span>
+                    <span class="answer-key">Jawaban: Kepompong</span>
+                    <p class="explanation">Fase di mana larva membungkus dirinya. Di dalam sini, tubuh hewan hancur dan dibentuk kembali menjadi bentuk dewasa yang sempurna.</p>
+                </div>
+
+                <div class="quiz-item">
+                    <span class="question">4. Contoh Hewan Metamorfosis Sempurna?</span>
+                    <span class="answer-key">Jawaban: Katak, Kupu-kupu, Nyamuk</span>
+                    <p class="explanation">Hewan-hewan ini mengalami empat tahapan siklus hidup yang berbeda-beda bentuknya secara drastis.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <a href="kesimpulan.html" class="btn-next">Selesai ➔</a>
+        </div>
+    </main>
+
+</body>
+</html>

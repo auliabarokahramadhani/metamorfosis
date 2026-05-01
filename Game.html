@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintaks 1: Stimulasi - Petualangan Kupu-Kupu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Recursive', sans-serif;
+        }
+
+        body {
+            height: 100vh; /* Tinggi pas satu layar */
+            width: 100vw;
+            overflow: hidden; /* Menghilangkan scroll */
+            background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), 
+                        url('background.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- Navigasi --- */
+        .nav-header {
+            flex: 0 0 auto; /* Tidak menyusut */
+            padding: 10px 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-nav {
+            padding: 6px 15px;
+            background: white;
+            border-radius: 50px;
+            text-decoration: none;
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 0.8rem;
+            border: 2px solid #81c784;
+            box-shadow: 0 3px 0 #81c784;
+        }
+
+        /* --- Container Utama --- */
+        .content-wrapper {
+            flex: 1; /* Mengambil sisa ruang */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly; /* Membagi ruang secara merata */
+            padding: 0 20px 10px 20px;
+            width: 100%;
+        }
+
+        .page-title h1 {
+            font-size: clamp(1.2rem, 4vh, 2rem); /* Ukuran teks adaptif */
+            color: #1b5e20;
+            text-shadow: 2px 2px 0px white;
+        }
+
+        /* --- Balon Dialog --- */
+        .dialog-box {
+            background: white;
+            border-radius: 15px;
+            padding: 10px 20px;
+            max-width: 600px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 2px solid #a8e063;
+        }
+
+        .dialog-box p {
+            font-size: clamp(0.8rem, 2.5vh, 1rem);
+            color: #1b4d00;
+            line-height: 1.3;
+        }
+
+        /* --- GAMBAR LANDSCAPE PAS LAYAR --- */
+        .game-landscape {
+            flex: 1; /* Gambar akan membesar mengisi ruang yang ada */
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: white;
+            padding: 5px;
+            border-radius: 15px;
+            border: 4px solid #ffffff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .game-landscape img {
+            max-width: 100%;
+            max-height: 100%; /* Kunci agar tidak melebihi layar */
+            object-fit: contain; /* Memastikan gambar tidak terpotong */
+            border-radius: 8px;
+        }
+
+        /* --- Tombol Bawah --- */
+        .button-group {
+            flex: 0 0 auto;
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .btn-action {
+            padding: 10px 30px;
+            color: white;
+            text-decoration: none;
+            font-size: clamp(0.9rem, 3vh, 1.1rem);
+            font-weight: bold;
+            border-radius: 50px;
+            transition: 0.2s;
+            text-transform: uppercase;
+        }
+
+        .mulai {
+            background: linear-gradient(45deg, #4caf50, #8bc34a);
+            box-shadow: 0 4px 0 #388e3c;
+        }
+
+        .next {
+            background: linear-gradient(45deg, #ff9800, #ffb74d);
+            box-shadow: 0 4px 0 #e65100;
+        }
+
+        /* KHUSUS LANDSCAPE SANGAT PENDEK */
+        @media (max-height: 450px) {
+            .page-title h1 { display: none; } /* Sembunyikan judul jika layar terlalu sempit */
+            .dialog-box { padding: 5px 15px; margin-bottom: 5px; }
+            .content-wrapper { justify-content: flex-end; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="nav-header">
+        <a href="m-sempurna.html" class="btn-nav">← Kembali</a>
+        <a href="index.html" class="btn-nav">🏠 Home</a>
+    </header>
+
+    <main class="content-wrapper">
+        <div class="page-title">
+            <h1>Cari Kata 🔍</h1>
+        </div>
+
+        <div class="dialog-box">
+            <p>Ayo! Temukan kata-kata tentang metamorfosis dan tuliskan pengertiannya!</p>
+        </div>
+
+        <div class="game-landscape">
+            <img src="wordsearch.jpeg" alt="Game Cari Kata Kupu-Kupu">
+        </div>
+
+        <div class="button-group">
+            <a href="KotakDetektif.html" class="btn-action mulai">Main!</a>
+            <a href="verification.html" class="btn-action next">Next ➔</a>
+        </div>
+    </main>
+
+</body>
+</html>
